@@ -35,24 +35,3 @@ def aes_decrypt(ciphertext, key, iv):
     decrypted_padded_text = cipher.decrypt(ciphertext)
     decrypted_text = unpad(decrypted_padded_text, AES.block_size)
     return decrypted_text.decode('utf-8')
-
-# Modo de prueba automático (comentar para usar)
-"""
-def test_aes():
-    plaintext = "Mensaje de prueba para AES-256"
-    key_input = "claveAES256"
-    iv_input = "ivAES256"
-
-    key = adjust_key(key_input)
-    iv = adjust_iv(iv_input)
-
-    print(f"Clave AES-256 ajustada: {key.hex()}")
-
-    ciphertext = aes_encrypt(plaintext, key, iv)
-    print(f"Texto cifrado AES-256: {ciphertext.hex()}")
-
-    decrypted_text = aes_decrypt(ciphertext, key, iv)
-    print(f"Texto descifrado AES-256: {decrypted_text}")
-
-# test_aes()
-"""

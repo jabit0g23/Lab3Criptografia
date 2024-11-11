@@ -36,23 +36,3 @@ def des_decrypt(ciphertext, key, iv):
     decrypted_text = unpad(decrypted_padded_text, DES.block_size)
     return decrypted_text.decode('utf-8')
 
-# Modo de prueba automático (comentar para usar)
-"""
-def test_des():
-    plaintext = "Mensaje de prueba para DES"
-    key_input = "claveDES"
-    iv_input = "ivDES"
-
-    key = adjust_key(key_input)
-    iv = adjust_iv(iv_input)
-
-    print(f"Clave DES ajustada: {key.hex()}")
-
-    ciphertext = des_encrypt(plaintext, key, iv)
-    print(f"Texto cifrado DES: {ciphertext.hex()}")
-
-    decrypted_text = des_decrypt(ciphertext, key, iv)
-    print(f"Texto descifrado DES: {decrypted_text}")
-
-# test_des()
-"""
